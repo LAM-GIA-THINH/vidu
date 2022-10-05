@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="USER.master.cs" Inherits="QUANLYBANHANG_00340.USER" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 404px;
+            margin-bottom: 240px;
+        }
+        .auto-style2 {
+            height: 55px;
+        }
+        .auto-style3 {
+            height: 199px;
+        }
+        .auto-style4 {
+            width: 440px;
+            height: 114px;
+        }
+        .auto-style5 {
+            height: 199px;
+            width: 374px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2" colspan="3">
+                    <img alt="" class="auto-style4" src="IMAGES/BANNER.jfif" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+                    <asp:Repeater ID="Repeater1" runat="server">
+                                                <ItemTemplate>
+                            <%# Eval("TENDANHMUC") %>
+                            <BR />
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </td>
+                <td class="auto-style3">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style3"></td>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
